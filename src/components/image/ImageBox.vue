@@ -26,6 +26,7 @@ export default {
       document.execCommand('copy');
       document.body.removeChild(el);
 
+      // eslint-disable-next-line no-undef
       swal({
         text: "Image Address copied to Clipboard!",
         icon: "success",

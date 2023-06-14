@@ -37,12 +37,14 @@ export default {
   methods: {
     async fetchData() {
       // fetch products
+      // eslint-disable-next-line no-undef
       await axios
           .get(this.baseURL + 'product/')
           .then((res) => (this.products = res.data))
           .catch((err) => console.log(err));
 
       //fetch categories
+      // eslint-disable-next-line no-undef
       await axios
           .get(this.baseURL + 'category/')
           .then((res) => (this.categories = res.data))
@@ -50,9 +52,10 @@ export default {
 
       //fetch cart items
       if (this.token) {
+        // eslint-disable-next-line no-undef
         await axios.get(`${this.baseURL}cart/?token=${this.token}`).then(
             (response) => {
-              if (response.status == 200) {
+              if (response.status === 200) {
                 // update cart
                 this.cartCount = Object.keys(response.data.cartItems).length;
               }

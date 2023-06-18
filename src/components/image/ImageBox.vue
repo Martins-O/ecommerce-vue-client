@@ -23,7 +23,11 @@ export default {
       el.style.left = '-9999px';
       document.body.appendChild(el);
       el.select();
-      document.execCommand('copy');
+      document.clipboard
+          .readText()
+          .then(
+              (clipText) => (document.querySelector(".editor").innerText += clipText)
+          );
       document.body.removeChild(el);
 
       // eslint-disable-next-line no-undef

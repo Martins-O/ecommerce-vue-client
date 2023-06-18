@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!--    Logo-->
     <router-link class="navbar-brand" :to="{ name: 'Home' }">
-      <img id="logo" src="../assets/icon.png" />
+      <img id="logo" src="../assets/icon.png"  alt=""/>
     </router-link>
 
     <!--    Burger Button-->
@@ -92,7 +92,7 @@
             <router-link
                 class="dropdown-item"
                 v-if="!token"
-                :to="{ name: 'Signin' }"
+                :to="{ name: 'Sign_in' }"
             >Wishlist</router-link
             >
             <router-link class="dropdown-item" v-else :to="{ name: 'Wishlist' }"
@@ -104,7 +104,7 @@
             <router-link
                 class="dropdown-item"
                 v-if="!token"
-                :to="{ name: 'Signin' }"
+                :to="{ name: 'Sign_in' }"
             >Log In</router-link
             >
             <router-link
@@ -113,7 +113,7 @@
                 :to="{ name: 'Signup' }"
             >Sign Up</router-link
             >
-            <a class="dropdown-item" v-if="token" href="#" @click="signout"
+            <a class="dropdown-item" v-if="token" href="#" @click="sign_out"
             >Sign Out</a
             >
           </div>
@@ -148,7 +148,7 @@ export default {
     };
   },
   methods: {
-    signout() {
+    sign_out() {
       localStorage.removeItem("token");
       this.token = null;
       this.$emit("resetCartCount");

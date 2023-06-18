@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 
-import Admin from '../views/Admin/Admin.vue'
+import Admin from '../views/Admin/AdminPanel.vue'
 import Gallery from '../views/Admin/Gallery.vue'
 import AddImage from '../views/Admin/AddImage.vue'
 
@@ -52,53 +52,53 @@ const routes = [
     },
     //Product routes
     {
-        path: '/product',
+        path: '/Product',
         name: 'Product',
         component: Product
     },
     {
-        path: '/admin/product',
+        path: '/admin/Product',
         name: 'AdminProduct',
         component: Product
     },
     {
-        path: '/admin/product/add',
+        path: '/admin/Product/add',
         name: 'AddProduct',
         component: AddProduct
     },
     {
-        path: '/admin/product/:id',
+        path: '/admin/Product/:id',
         name: 'EditProduct',
         component: EditProduct,
     },
     {
-        path : '/product/show/:id',
+        path : '/Product/show/:id',
         name : 'ShowDetails',
         component: ShowDetails
     },
     //Category routes
     {
-        path: '/category',
+        path: '/Category',
         name: 'Category',
         component: Category
     },
     {
-        path: '/admin/category',
+        path: '/admin/Category',
         name: 'AdminCategory',
         component: Category
     },
     {
-        path: '/admin/category/add',
+        path: '/admin/Category/add',
         name: 'AddCategory',
         component: AddCategory
     },
     {
-        path: '/admin/category/:id',
+        path: '/admin/Category/:id',
         name: 'EditCategory',
         component: EditCategory
     },
     {
-        path : '/category/show/:id',
+        path : '/Category/show/:id',
         name : 'ListProducts',
         component: ListProducts
     },
